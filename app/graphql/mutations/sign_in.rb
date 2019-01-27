@@ -13,7 +13,13 @@ module Mutations
       if @user
         if @user.valid_password?(args[:password])
           authentication_token = @user.authentication_token
-          return OpenStruct.new(authentication_token: authentication_token)
+          first_name = @user.first_name
+          last_name = @user.last_name
+          return OpenStruct.new(
+                               first_name: first_name,
+                               last_name: last_name,
+                               authentication_token: authentication_token
+          )
         else
           GraphQL::ExecutionError.new('Incorrect Email/Password')
         end

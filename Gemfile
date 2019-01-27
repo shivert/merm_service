@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.4.0'
+ruby '2.5.0'
 
 
 
@@ -14,6 +14,8 @@ gem 'graphiql-rails'
 # Authentication
 gem 'devise'
 gem 'devise-token_authenticatable'
+
+gem 'rack-cors'
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
