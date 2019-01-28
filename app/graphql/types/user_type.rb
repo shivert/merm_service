@@ -8,5 +8,7 @@ module Types
     field :lastName, !types.String, property: :last_name
     field :firstName, !types.String, property: :first_name
     field :email, !types.String
+    field :authenticationToken, !types.String, property: :authentication_token
+
   end
 end
