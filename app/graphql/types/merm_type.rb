@@ -21,6 +21,9 @@ module Types
     field :tags, types[Types::TagType] do
       resolve -> (obj, args, ctx) { obj.tags }
     end
+    field :comments, types[Types::CommentType] do
+      resolve -> (obj, args, ctx) { obj.comments }
+    end
     field :sharedWith, types[Types::UserType] do
       resolve -> (obj, args, ctx) { [obj.user] }
     end

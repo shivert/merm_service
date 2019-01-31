@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable
 
   has_many :merms, dependent: :destroy
+  has_many :comments, dependent: :destroy
 end
 
 # == Schema Information

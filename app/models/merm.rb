@@ -2,6 +2,7 @@ class Merm < ApplicationRecord
 
   belongs_to :user, foreign_key: "owner_id"
   has_many :tags, dependent: :destroy
+  has_many :comments, dependent: :destroy
   
   def self.find_authorized(id, user)
     Merm.find_by(id: id, owner_id: user.id)

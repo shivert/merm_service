@@ -38,3 +38,13 @@ Merm.all.each do |merm|
     )
   end
 end
+
+Merm.all.each do |merm|
+  3.times do |idx|
+    Comment.create!(
+       content: Faker::Hipster.paragraph(3),
+       merm_id: merm.id,
+       author_id: User.all.pluck(:id).sample
+    )
+  end
+end
