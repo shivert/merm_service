@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable
 
-  has_many :merms, dependent: :destroy
-  has_many :comments, dependent: :destroy
+  has_many :merms, :foreign_key => "owner_id", dependent: :destroy
+  has_many :comments, :foreign_key => "author_id", dependent: :destroy
 end
 
 # == Schema Information

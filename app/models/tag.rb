@@ -1,5 +1,5 @@
 class Tag < ApplicationRecord
-  has_one :merm
+  belongs_to :merm
 end
 
 # == Schema Information
