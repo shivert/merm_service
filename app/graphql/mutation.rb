@@ -4,5 +4,6 @@ Mutation = GraphQL::ObjectType.define do
   field :signUp, Mutations::RegisterUser
   field :editMerm, Mutations::EditMerm
   field :addComment, Mutations::AddComment
+  field :addTag, Mutations::AddTag
   field :deleteTag, Mutations::DeleteTag
 end
