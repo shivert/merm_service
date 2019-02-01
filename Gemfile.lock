@@ -44,6 +44,7 @@ GEM
     arel (8.0.0)
     bcrypt (3.1.11)
     builder (3.2.3)
+    byebug (10.0.2)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
     devise (4.3.0)
@@ -146,6 +147,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  byebug
   devise
   devise-token_authenticatable
   faker
