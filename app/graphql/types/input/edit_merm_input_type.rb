@@ -4,7 +4,10 @@ module Types
       name 'EditMermInputType'
       description 'Properties for editing a Merm'
 
-      argument :favorite, !types.Boolean
+      # argument :name, !types.String,
+      argument :resourceName, !types.String
+      argument :resourceUrl, !types.String
+      argument :description, !types.String
     end
   end
 end

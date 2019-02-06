@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9c26994-8dde-4e29-8e87-82e11fe4cf10" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/config/initializers/token_authenticable.rb" afterPath="$PROJECT_DIR$/config/initializers/token_authenticable.rb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/graphql/mutations/favorite_merm.rb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/graphql/types/input/favorite_merm_input_type.rb" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/graphql/mutation.rb" afterPath="$PROJECT_DIR$/app/graphql/mutation.rb" />
+      <change beforePath="$PROJECT_DIR$/app/graphql/types/input/edit_merm_input_type.rb" afterPath="$PROJECT_DIR$/app/graphql/types/input/edit_merm_input_type.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -21,26 +25,6 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="register_user.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/graphql/mutations/register_user.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="11" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="comment_type.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/graphql/types/comment_type.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="tag_input_type.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/graphql/types/input/tag_input_type.rb">
               <provider selected="true" editor-type-id="text-editor">
@@ -65,7 +49,7 @@
             <entry file="file://$PROJECT_DIR$/Gemfile">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="285">
-                  <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+                  <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
@@ -74,8 +58,18 @@
           <file leaf-file-name="edit_merm.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/graphql/mutations/edit_merm.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+                <state relative-caret-position="255">
+                  <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="edit_merm_input_type.rb" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/graphql/types/input/edit_merm_input_type.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -91,11 +85,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="token_authenticable.rb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="token_authenticable.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/config/initializers/token_authenticable.rb">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="210">
-                  <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+                  <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="user_input_type.rb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/graphql/types/input/user_input_type.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -105,7 +109,7 @@
             <entry file="file://$PROJECT_DIR$/config/application.rb">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="450">
-                  <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+                  <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
                   <folding />
                 </state>
               </provider>
@@ -125,11 +129,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="sign_in.rb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="sign_in.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/graphql/mutations/sign_in.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+                <state relative-caret-position="165">
+                  <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -148,8 +152,8 @@
           <file leaf-file-name="add_tag.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/graphql/mutations/add_tag.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+                <state relative-caret-position="45">
+                  <caret line="3" column="49" lean-forward="false" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
                   <folding />
                 </state>
               </provider>
@@ -188,16 +192,6 @@
           <file leaf-file-name="merm.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/models/merm.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="2" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="31" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="auth_type.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/graphql/types/auth_type.rb">
-              <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="180">
                   <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
                   <folding />
@@ -208,18 +202,28 @@
           <file leaf-file-name="mutation.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/graphql/mutation.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+                <state relative-caret-position="90">
+                  <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="comment.rb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
+          <file leaf-file-name="favorite_merm.rb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/graphql/mutations/favorite_merm.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+                <state relative-caret-position="150">
+                  <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="favorite_merm_input_type.rb" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/graphql/types/input/favorite_merm_input_type.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="135">
+                  <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
@@ -257,9 +261,6 @@
         <option value="$PROJECT_DIR$/app/graphql/types/user_type.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180322232847_devise_create_users.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190129204956_create_merms.rb" />
-        <option value="$PROJECT_DIR$/app/graphql/types/input/user_input_type.rb" />
-        <option value="$PROJECT_DIR$/app/graphql/types/input/edit_merm_input_type.rb" />
-        <option value="$PROJECT_DIR$/app/graphql/mutations/edit_merm.rb" />
         <option value="$PROJECT_DIR$/app/graphql/types/dashboard_type.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190131202300_create_comments.rb" />
         <option value="$PROJECT_DIR$/app/models/comment.rb" />
@@ -275,12 +276,17 @@
         <option value="$PROJECT_DIR$/app/models/tag.rb" />
         <option value="$PROJECT_DIR$/app/graphql/types/input/tag_input_type.rb" />
         <option value="$PROJECT_DIR$/app/graphql/mutations/add_comment.rb" />
-        <option value="$PROJECT_DIR$/app/graphql/mutation.rb" />
         <option value="$PROJECT_DIR$/app/graphql/mutations/add_tag.rb" />
         <option value="$PROJECT_DIR$/app/models/merm.rb" />
         <option value="$PROJECT_DIR$/app/graphql/query.rb" />
         <option value="$PROJECT_DIR$/app/graphql/mutations/sign_in.rb" />
         <option value="$PROJECT_DIR$/config/initializers/token_authenticable.rb" />
+        <option value="$PROJECT_DIR$/app/graphql/types/input/user_input_type.rb" />
+        <option value="$PROJECT_DIR$/app/graphql/mutation.rb" />
+        <option value="$PROJECT_DIR$/app/graphql/mutations/edit_merm.rb" />
+        <option value="$PROJECT_DIR$/app/graphql/types/input/edit_merm_input_type.rb" />
+        <option value="$PROJECT_DIR$/app/graphql/mutations/favorite_merm.rb" />
+        <option value="$PROJECT_DIR$/app/graphql/types/input/favorite_merm_input_type.rb" />
       </list>
     </option>
   </component>
@@ -434,6 +440,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/graphql/types/input" />
+      <recent name="$PROJECT_DIR$/app/graphql/mutations" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -563,12 +575,12 @@
       <option name="presentableId" value="Default" />
       <updated>1548093594730</updated>
       <workItem from="1548093597138" duration="5396000" />
-      <workItem from="1549058324135" duration="4385000" />
+      <workItem from="1549058324135" duration="6128000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28154000" />
+    <option name="totallyTimeSpent" value="29897000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="23" width="1622" height="1027" extended-state="0" />
@@ -606,20 +618,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/graphql_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/jobs/application_job.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/application_record.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -639,6 +637,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -700,6 +699,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -708,6 +708,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -752,14 +753,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/graphql/queries/protected_query.rb" />
-    <entry file="file://$PROJECT_DIR$/app/graphql/types/input/edit_merm_input_type.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/graphql/resolvers/helpers/authorize_user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -808,14 +801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/graphql/types/input/user_input_type.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/graphql/types/auth_type.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -840,14 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/graphql/mutations/edit_merm.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -860,14 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/graphql/types/input/comment_input_type.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -896,14 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/graphql/mutation.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/graphql/types/comment_type.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -912,42 +873,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/graphql/types/input/tag_input_type.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/graphql/mutations/add_tag.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/merm.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="2" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/graphql/query.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/graphql/mutations/sign_in.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -971,7 +900,7 @@
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+          <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -979,7 +908,7 @@
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -987,7 +916,95 @@
     <entry file="file://$PROJECT_DIR$/config/initializers/token_authenticable.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/graphql/mutations/sign_in.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/graphql/mutations/add_tag.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="49" lean-forward="false" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/graphql/types/input/tag_input_type.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/graphql/types/input/comment_input_type.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/graphql/types/input/user_input_type.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/merm.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/graphql/mutation.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/graphql/mutations/favorite_merm.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/graphql/mutations/edit_merm.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/graphql/types/input/edit_merm_input_type.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/graphql/types/input/favorite_merm_input_type.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
           <folding />
         </state>
       </provider>
