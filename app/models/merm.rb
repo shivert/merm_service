@@ -7,6 +7,12 @@ class Merm < ApplicationRecord
   def self.find_authorized(id, user)
     Merm.find_by(id: id, owner_id: user.id)
   end
+
+  def self.search(search, user)
+    wildcard_search = "%#{search}%"
+
+    where("owner_id IS :owner_id AND name LIKE :search OR description LIKE :search", search: wildcard_search, owner_id: user.id)
+  end
 end
 
 # == Schema Information

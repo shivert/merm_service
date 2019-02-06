@@ -34,4 +34,13 @@ Query = GraphQL::ObjectType.define do
       Merm.find(_args[:id])
     })
   end
+
+  field :searchMerm do
+    type types[Types::MermType]
+    description "Search For a Merm"
+    argument :queryString, !types.String
+    resolve Resolvers::Helpers::AuthorizeUser.new(->(_obj, _args, ctx) {
+      Merm.search(_args[:queryString], ctx[:current_user])
+    })
+  end
 end
