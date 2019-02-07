@@ -5,6 +5,7 @@ module Types
       description 'Properties for editing a Merm'
 
       # argument :name, !types.String,
+      argument :name, !types.String
       argument :resourceName, !types.String
       argument :resourceUrl, !types.String
       argument :description, !types.String
