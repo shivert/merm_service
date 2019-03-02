@@ -9,7 +9,7 @@ module Resolvers
 
       def call(obj, args, ctx)
         if ctx[:current_user].blank?
-          GraphQL::ExecutionError.new('User not signed in')
+          GraphQL::ExecutionError.new('User not signed in!')
         else
           @resolve_func.call(obj, args, ctx)
         end

@@ -19,7 +19,7 @@
 require 'test_helper'
 
 class MermTest < ActiveSupport::TestCase
-  # test "the truth" do
+  # spec "the truth" do
   #   assert true
   # end
 end

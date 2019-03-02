@@ -8,7 +8,7 @@ module Mutations
 
     type Types::AuthType
 
-    resolve ->(_obj, args, _ctx) {
+    resolve -> (_obj, args, _ctx) {
       @user = User.find_for_database_authentication(email: args[:email])
       if @user
         if @user.valid_password?(args[:password])

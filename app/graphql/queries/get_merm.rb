@@ -1,12 +1,15 @@
-# frozen_string_literal: true
-
 module Queries
-  GetMerms = GraphQL::Field.define do
-    name 'Query'
+  GetMerm = GraphQL::Field.define do
+    name 'getMerm'
+    description "Return a Merm"
+
+    argument :id, !types.ID
+
     type Types::MermType
 
     resolve Resolvers::Helpers::AuthorizeUser.new(->(_obj, _args, ctx) {
-      ctx[:current_user]
+      Merm.find(_args[:id])
     })
   end
 end
+

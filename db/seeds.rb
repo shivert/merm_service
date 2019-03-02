@@ -2,6 +2,8 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 require 'faker'
 
+Merm.__elasticsearch__.create_index!(force: true)
+
 10.times do |idx|
   name = Faker::Name.first_name
 
