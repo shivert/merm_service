@@ -4,6 +4,15 @@ require 'faker'
 
 Merm.__elasticsearch__.create_index!(force: true)
 
+input = {
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: "spencer.hivert@gmail.com",
+    password: "password"
+}
+
+User.create!(input)
+
 10.times do |idx|
   name = Faker::Name.first_name
 

@@ -1,5 +1,9 @@
 class Tag < ApplicationRecord
-  belongs_to :merm
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks unless skip_elasticsearch_callbacks
+
+  belongs_to :merm, touch: true
+
 end
 
 # == Schema Information

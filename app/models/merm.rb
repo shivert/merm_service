@@ -1,12 +1,18 @@
 require 'elasticsearch/model'
 
+class ActiveRecord::Base
+  cattr_accessor :skip_elasticsearch_callbacks
+end
+
+ActiveRecord::Base.skip_elasticsearch_callbacks = true
+
 class Merm < ApplicationRecord
   belongs_to :user, foreign_key: "owner_id"
   has_many :tags, dependent: :destroy
   has_many :comments, dependent: :destroy
 
   include Elasticsearch::Model
-  include Elasticsearch::Model::Callbacks
+  include Elasticsearch::Model::Callbacks unless skip_elasticsearch_callbacks
   
   def self.find_authorized(id, user)
     Merm.find_by(id: id, owner_id: user.id)
@@ -24,6 +30,9 @@ class Merm < ApplicationRecord
         include: {
             user: {
                 only: [:first_name, :last_name]
+            },
+            tags: {
+                only: [:id, :name]
             }
         }
     )
