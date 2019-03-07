@@ -10,11 +10,15 @@ module Types
     field :favorite, !types.Boolean, property: :favorite
     field :capturedText, !types.String, property: :captured_text
     field :description, !types.String, property: :description
+    field :contentType, !types.String, property: :content_type
     field :lastAccessed, !types.String, property: :last_accessed
     field :createdAt, !types.String, property: :created_at
     field :updatedAt, !types.String, property: :updated_at
-    field :resourceName, !types.String, property: :resource_name
+    field :resourceName, types.String, property: :resource_name
     field :resourceUrl, !types.String, property: :resource_url
+    field :category, Types::CategoryType do
+      resolve -> (obj, args, ctx) { obj.category }
+    end
     field :owner, Types::UserType do
       resolve -> (obj, args, ctx) { obj.user }
     end

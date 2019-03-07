@@ -4,6 +4,7 @@
 #
 #  id            :integer          not null, primary key
 #  captured_text :string
+#  content_type  :string
 #  description   :string
 #  favorite      :boolean          default(FALSE), not null
 #  last_accessed :datetime
@@ -13,6 +14,7 @@
 #  source        :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  category_id   :integer
 #  owner_id      :integer
 #
 

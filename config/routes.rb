@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   resources :search, only: [:index]
   get "/custom-search", to: "search#execute"
+  get "/advanced-search", to: "search#advanced"
+  get "/category", to: "search#category"
 end

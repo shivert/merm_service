@@ -4,5 +4,8 @@ Query = GraphQL::ObjectType.define do
   field :allMerms, Queries::AllMerms
   field :dashboardMerms, Queries::DashboardMerms
   field :merm, Queries::GetMerm
+  field :categories, Queries::GetCategories
+  field :users, Queries::GetUsers
+  field :tags, Queries::GetTags
   field :searchMerm, Queries::SearchMerm
 end

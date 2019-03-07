@@ -5,7 +5,7 @@ module Types
       description 'Properties for adding a new Comment'
 
       argument :content, !types.String
-      argument :merm_id , !types.ID
+      argument :merm_id, !types.ID
       argument :author_id, !types.ID
     end
   end

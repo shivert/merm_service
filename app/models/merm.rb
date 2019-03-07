@@ -1,37 +1,53 @@
 require 'elasticsearch/model'
-
-class ActiveRecord::Base
-  cattr_accessor :skip_elasticsearch_callbacks
-end
-
-ActiveRecord::Base.skip_elasticsearch_callbacks = true
+require 'uri'
 
 class Merm < ApplicationRecord
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks unless skip_elasticsearch_callbacks
+
+  before_validation :set_content_type, on: :create
+  before_validation :set_access_date, on: :create
+
   belongs_to :user, foreign_key: "owner_id"
   has_many :tags, dependent: :destroy
   has_many :comments, dependent: :destroy
+  belongs_to :category, foreign_key: "category_id", touch: true
 
-  include Elasticsearch::Model
-  include Elasticsearch::Model::Callbacks unless skip_elasticsearch_callbacks
-  
+  validates :content_type, :inclusion => { :in => CONTENT_TYPES }
+
+  after_save :reindex
+
+  def reindex
+    __elasticsearch__.index_document
+  end
+
+
   def self.find_authorized(id, user)
     Merm.find_by(id: id, owner_id: user.id)
   end
 
-  def self.search(search, user)
-    wildcard_search = "%#{search}%"
+  def set_content_type
+    uri = URI.parse(self.resource_url)
+    type = CONTENT_TYPE_MAPPING[uri.host.to_sym] || "chrome"
 
-    where("owner_id IS :owner_id AND name LIKE :search OR description LIKE :search", search: wildcard_search, owner_id: user.id)
+    self.content_type = type
+  end
+
+  def set_access_date
+    self.last_accessed = Time.now
   end
 
   def as_indexed_json(options = {})
     self.as_json(
-        only: [:id, :name, :owner_id],
+        only: [:id, :name, :source, :content_type, :description, :owner_id, :category_id, :last_accessed],
         include: {
             user: {
                 only: [:first_name, :last_name]
             },
             tags: {
+                only: [:id, :name]
+            },
+            category: {
                 only: [:id, :name]
             }
         }
@@ -45,6 +61,7 @@ end
 #
 #  id            :integer          not null, primary key
 #  captured_text :string
+#  content_type  :string
 #  description   :string
 #  favorite      :boolean          default(FALSE), not null
 #  last_accessed :datetime
@@ -54,5 +71,6 @@ end
 #  source        :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  category_id   :integer
 #  owner_id      :integer
 #

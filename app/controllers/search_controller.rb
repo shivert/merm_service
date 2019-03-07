@@ -4,12 +4,8 @@ class SearchController < ApplicationController
   def index
     response = Merm.__elasticsearch__.search(
         query: {
-            constant_score: {
-                filter: {
-                    term: {
-                        owner_id: current_user.id
-                    }
-                }
+            term: {
+                owner_id: current_user.id
             }
         },
         size:  1000
@@ -29,7 +25,7 @@ class SearchController < ApplicationController
                 must: {
                     multi_match: {
                         query: params['q'],
-                        fields: ["name", "description"],
+                        fields: ["name", "description","tags.name"],
                         fuzziness: "AUTO"
                     }
                 },
@@ -38,6 +34,55 @@ class SearchController < ApplicationController
                       owner_id: current_user.id
                   }
                 }
+            }
+        },
+        size:  1000
+    ).results
+
+
+    render json: {
+        results: response.results,
+        total: response.total
+    }
+  end
+
+  def advanced
+    ## Need to create this
+    response = Merm.__elasticsearch__.search(
+        query: {
+            bool: {
+                must: [
+                    {
+                        term: {owner_id: current_user.id}
+                    },
+                    {
+                        term: {"category.name": params["q"].downcase}
+                    }
+                ]
+            }
+        },
+        size:  1000
+    ).results
+
+
+    render json: {
+        results: response.results,
+        total: response.total
+    }
+  end
+
+  def category
+    response = Merm.__elasticsearch__.search(
+        query: {
+            bool: {
+                must: [
+                    {
+                        term: {owner_id: current_user.id}
+                    },
+                    {
+                        term: {"category.name": params["q"].downcase}
+                    }
+                ]
             }
         },
         size:  1000

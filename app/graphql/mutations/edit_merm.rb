@@ -14,7 +14,7 @@ module Mutations
       if @merm
         input = Hash[args[:merm].to_h.map {|k, v| [k.to_s.underscore.to_sym, v]}]
 
-        if (@merm.update(input))
+        if (@merm.update!(input))
           return @merm
         else
           # Failed update, return the errors to the client

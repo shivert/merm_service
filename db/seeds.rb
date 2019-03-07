@@ -4,6 +4,7 @@ require 'faker'
 
 Merm.__elasticsearch__.create_index!(force: true)
 
+## Hard Code User Account
 input = {
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -13,7 +14,8 @@ input = {
 
 User.create!(input)
 
-10.times do |idx|
+## Create 10 Users
+4.times do |idx|
   name = Faker::Name.first_name
 
   input = {
@@ -27,17 +29,41 @@ User.create!(input)
 end
 
 User.all.each do |user|
-  20.times do |idx|
-    Merm.create!(
-        captured_text: Faker::Lorem.paragraph(2),
-        description: Faker::Lorem.paragraph(2),
-        last_accessed: 2.days.ago,
-        name: Faker::Company.name,
-        resource_name: Faker::Company.name,
-        resource_url: Faker::Internet.url,
-        source: ["Chrome Extension", "merm.io", "Slackbot"].sample,
-        owner_id: user.id
+  fixed_categories = ["Recent", "Favorites", "Unread Resources"]
+
+  3.times do |idx|
+    Category.create!(
+        owner_id: user.id,
+        name: fixed_categories[idx],
+        rank: idx,
+        custom: false
     )
+  end
+
+  2.times do |idx|
+    Category.create!(
+       owner_id: user.id,
+       name: Faker::Space.star,
+       rank: idx + 3,
+       custom: true
+    )
+  end
+
+  user.categories.each do |category|
+    6.times do |idx|
+      Merm.create!(
+          captured_text: Faker::Lorem.paragraph(2),
+          description: Faker::Lorem.paragraph(2),
+          content_type: CONTENT_TYPES.sample,
+          last_accessed: Faker::Time.between(6.days.ago, Date.today, :day),
+          name: Faker::Company.name,
+          resource_name: Faker::Company.name,
+          resource_url: Faker::Internet.url,
+          source: ["Browser Extension", "merm.io", "Slackbot"].sample,
+          owner_id: user.id,
+          category_id: category.id
+      )
+    end
   end
 end
 
@@ -48,14 +74,12 @@ Merm.all.each do |merm|
         merm_id: merm.id
     )
   end
-end
 
-Merm.all.each do |merm|
   3.times do |idx|
     Comment.create!(
-       content: Faker::Hipster.paragraph(3),
-       merm_id: merm.id,
-       author_id: User.all.pluck(:id).sample
+        content: Faker::Hipster.paragraph(3),
+        merm_id: merm.id,
+        author_id: User.all.pluck(:id).sample
     )
   end
 end

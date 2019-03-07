@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190131202300) do
+ActiveRecord::Schema.define(version: 20190303023841) do
+
+  create_table "categories", force: :cascade do |t|
+    t.integer "owner_id", null: false
+    t.string "name", null: false
+    t.integer "rank", null: false
+    t.boolean "custom", default: true, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.integer "author_id"
@@ -26,6 +35,8 @@ ActiveRecord::Schema.define(version: 20190131202300) do
     t.boolean "favorite", default: false, null: false
     t.string "resource_url"
     t.integer "owner_id"
+    t.integer "category_id"
+    t.string "content_type"
     t.string "source"
     t.string "description"
     t.string "captured_text"

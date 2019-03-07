@@ -9,6 +9,7 @@ module Types
       argument :resourceName, !types.String
       argument :resourceUrl, !types.String
       argument :description, !types.String
+      argument :categoryId, !types.ID
     end
   end
 end
