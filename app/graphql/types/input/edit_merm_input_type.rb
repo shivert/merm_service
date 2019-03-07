@@ -7,6 +7,7 @@ module Types
       # argument :name, !types.String,
       argument :name, !types.String
       argument :resourceName, !types.String
+      argument :capturedText, types.String
       argument :resourceUrl, !types.String
       argument :description, !types.String
       argument :categoryId, !types.ID
