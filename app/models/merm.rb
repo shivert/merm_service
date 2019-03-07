@@ -11,7 +11,7 @@ class Merm < ApplicationRecord
   belongs_to :user, foreign_key: "owner_id"
   has_many :tags, dependent: :destroy
   has_many :comments, dependent: :destroy
-  belongs_to :category, foreign_key: "category_id", touch: true
+  belongs_to :category, foreign_key: "category_id", touch: true, optional: true
 
   validates :content_type, :inclusion => { :in => CONTENT_TYPES }
 
