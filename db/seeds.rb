@@ -5,12 +5,26 @@ require 'faker'
 Merm.__elasticsearch__.create_index!(force: true)
 
 ## Hard Code User Account
-input = {
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    email: "spencer.hivert@gmail.com",
-    password: "password"
-}
+input = [
+ {
+     first_name: Faker::Name.first_name,
+     last_name: Faker::Name.last_name,
+     email: "spencer.hivert@gmail.com",
+     password: "password"
+ },
+ {
+     first_name: Faker::Name.first_name,
+     last_name: Faker::Name.last_name,
+     email: "zach.pustowka@gmail.com",
+     password: "password"
+ },
+ {
+     first_name: Faker::Name.first_name,
+     last_name: Faker::Name.last_name,
+     email: "peterzhang7391@gmail.com",
+     password: "password"
+ }
+]
 
 User.create!(input)
 
