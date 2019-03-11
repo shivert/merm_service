@@ -1,0 +1,98 @@
+version: '3'
+
+volumes:
+  store:
+    driver: local
+  bundle:
+    driver: local
+
+services:
+  backend:
+    image: spencerhivert/merm_service_web:latest
+    depends_on:
+      - db
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+      - bundle:/usr/local/bundle
+    networks:
+      - merm-overlay-network
+    # Keep the stdin open, so we can attach to our app container's process and do things such as
+    # byebug, etc:
+    stdin_open: true
+    # Enable sending signals (CTRL+C, CTRL+P + CTRL+Q) into the container:
+    tty: true
+    command: ./bin/start.sh
+    environment: &app_env
+      PORT: 3000
+      DB_HOST: merm_db
+      DB_PORT: 5432
+      DB_NAME: merm_dev
+      DB_USER: postgres
+      DB_PSWD: postgres
+  db:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    volumes:
+      - store:/var/lib/postgresql/data
+    networks:
+      - merm-overlay-network
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: merm_dev
+  elasticsearch:
+    image: 'docker.elastic.co/elasticsearch/elasticsearch:6.6.1'
+    command: [ elasticsearch, -E, network.host=0.0.0.0, -E, discovery.zen.ping.unicast.hosts=elasticsearch, -E, discovery.zen.minimum_master_nodes=1 ]
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    networks:
+      - merm-overlay-network
+    deploy:
+      mode: 'global'
+      placement:
+        constraints: [node.labels.app_role == elasticsearch]
+  nginx:
+    image: 'nginx:1'
+    ports:
+      - '9200:9200'
+    networks:
+      - merm-overlay-network
+    command: |
+      /bin/bash -c "echo '
+      server {
+        listen 9200;
+        add_header X-Frame-Options "SAMEORIGIN";
+        location / {
+            proxy_pass http://elasticsearch:9200;
+            proxy_http_version 1.1;
+            proxy_set_header Connection keep-alive;
+            proxy_set_header Upgrade $$http_upgrade;
+            proxy_set_header Host $$host;
+            proxy_set_header X-Real-IP $$remote_addr;
+            proxy_cache_bypass $$http_upgrade;
+        }
+      }' | tee /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+  frontend:
+    image: 'spencerhivert/merm_js:latest'
+    ports:
+      - 80:80
+    networks:
+      - merm-overlay-network
+    deploy:
+      replicas: 5
+
+volumes:
+  esdata:
+    external: true
+  store:
+    driver: local
+  bundle:
+    driver: local
+
+networks:
+  merm-overlay-network:
+    external:
+      name: merm-overlay-network

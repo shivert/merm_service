@@ -2,26 +2,29 @@ source 'https://rubygems.org'
 ruby '2.5.0'
 
 
-
 gem 'rails', '~> 5.1.4'
-gem 'sqlite3'
 gem 'puma', '~> 3.7'
+gem 'paranoia', '~> 2.2'
 
 # ElasticSearch
 gem 'elasticsearch-model'
-
 
 # GraphQL
 gem 'graphql'
 gem 'graphiql-rails'
 
 # Authentication
-gem 'devise'
-gem 'devise-token_authenticatable'
+gem 'devise', '>=4.4'
+gem 'devise-token_authenticatable', '>=1.0.2'
 
 gem 'rack-cors'
 
+group :production do
+  gem 'pg'
+end
+
 group :development do
+  gem 'rb-readline'
   gem 'annotate'
   gem 'faker'
   gem 'byebug'
@@ -32,6 +35,7 @@ group :development do
 
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'sqlite3'
 end
 
 group :test do
@@ -39,6 +43,7 @@ group :test do
   gem 'database_cleaner'
   # Programmatically start and stop ES for tests
   gem 'elasticsearch-extensions'
+  gem 'sqlite3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

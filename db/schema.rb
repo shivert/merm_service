@@ -41,8 +41,10 @@ ActiveRecord::Schema.define(version: 20190303023841) do
     t.string "description"
     t.string "captured_text"
     t.datetime "last_accessed"
+    t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["deleted_at"], name: "index_merms_on_deleted_at"
   end
 
   create_table "tags", force: :cascade do |t|

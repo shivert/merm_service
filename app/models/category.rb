@@ -1,6 +1,6 @@
 class Category < ApplicationRecord
   include Elasticsearch::Model
-  include Elasticsearch::Model::Callbacks unless skip_elasticsearch_callbacks
+  include Elasticsearch::Model::Callbacks
 
   has_many :merms
   belongs_to :user, foreign_key: "owner_id"

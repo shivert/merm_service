@@ -1,6 +1,6 @@
 class Tag < ApplicationRecord
   include Elasticsearch::Model
-  include Elasticsearch::Model::Callbacks unless skip_elasticsearch_callbacks
+  include Elasticsearch::Model::Callbacks
 
   belongs_to :merm, touch: true
 

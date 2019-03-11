@@ -12,7 +12,7 @@ module Mutations
 
       if @merm
         if @merm.user == ctx[:current_user]
-          @merm.delete
+          @merm.destroy!
         else
           ## Trying to delete Tag on Someone else's Merm
           GraphQL::ExecutionError.new('Error: Unauthorized to Remove Merm')

@@ -5,6 +5,7 @@
 #  id            :integer          not null, primary key
 #  captured_text :string
 #  content_type  :string
+#  deleted_at    :datetime
 #  description   :string
 #  favorite      :boolean          default(FALSE), not null
 #  last_accessed :datetime
@@ -16,6 +17,10 @@
 #  updated_at    :datetime         not null
 #  category_id   :integer
 #  owner_id      :integer
+#
+# Indexes
+#
+#  index_merms_on_deleted_at  (deleted_at)
 #
 
 require 'rails_helper'

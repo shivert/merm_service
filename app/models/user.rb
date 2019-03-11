@@ -4,9 +4,24 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :token_authenticatable
 
+  after_create_commit :init_user_categories
+
   has_many :merms, :foreign_key => "owner_id", dependent: :destroy
   has_many :comments, :foreign_key => "author_id", dependent: :destroy
   has_many :categories, :foreign_key => "owner_id", dependent: :destroy
+
+  def init_user_categories
+    fixed_categories = ["Recent", "Favorites", "Unread Resources"]
+
+    3.times do |idx|
+      Category.create!(
+          owner_id: self.id,
+          name: fixed_categories[idx],
+          rank: idx,
+          custom: false
+      )
+    end
+  end
 end
 
 # == Schema Information

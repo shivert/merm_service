@@ -43,16 +43,6 @@ User.create!(input)
 end
 
 User.all.each do |user|
-  fixed_categories = ["Recent", "Favorites", "Unread Resources"]
-
-  3.times do |idx|
-    Category.create!(
-        owner_id: user.id,
-        name: fixed_categories[idx],
-        rank: idx,
-        custom: false
-    )
-  end
 
   2.times do |idx|
     Category.create!(

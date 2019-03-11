@@ -2,11 +2,9 @@ require 'elasticsearch/model'
 require 'uri'
 
 class Merm < ApplicationRecord
-  include Elasticsearch::Model
-  include Elasticsearch::Model::Callbacks unless skip_elasticsearch_callbacks
+  acts_as_paranoid
 
-  before_validation :set_content_type, on: :create
-  before_validation :set_access_date, on: :create
+  include Elasticsearch::Model
 
   belongs_to :user, foreign_key: "owner_id"
   has_many :tags, dependent: :destroy
@@ -15,12 +13,23 @@ class Merm < ApplicationRecord
 
   validates :content_type, :inclusion => { :in => CONTENT_TYPES }
 
-  after_save :reindex
+  before_validation :set_content_type, on: :create
+  before_validation :set_access_date, on: :create
 
-  def reindex
+  after_create_commit	:create_index
+  after_update_commit	:update_index
+
+  def create_index
     __elasticsearch__.index_document
   end
 
+  def update_index
+    if self.deleted_at.present?
+      __elasticsearch__.delete_document
+    else
+      __elasticsearch__.update_document
+    end
+  end
 
   def self.find_authorized(id, user)
     Merm.find_by(id: id, owner_id: user.id)
@@ -39,7 +48,7 @@ class Merm < ApplicationRecord
 
   def as_indexed_json(options = {})
     self.as_json(
-        only: [:id, :name, :source, :content_type, :description, :owner_id, :category_id, :last_accessed],
+        only: [:id, :name, :source, :content_type, :description, :owner_id, :category_id, :last_accessed, :resource_url],
         include: {
             user: {
                 only: [:first_name, :last_name]
@@ -62,6 +71,7 @@ end
 #  id            :integer          not null, primary key
 #  captured_text :string
 #  content_type  :string
+#  deleted_at    :datetime
 #  description   :string
 #  favorite      :boolean          default(FALSE), not null
 #  last_accessed :datetime
@@ -73,4 +83,8 @@ end
 #  updated_at    :datetime         not null
 #  category_id   :integer
 #  owner_id      :integer
+#
+# Indexes
+#
+#  index_merms_on_deleted_at  (deleted_at)
 #
