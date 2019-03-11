@@ -419,4 +419,5 @@ CONTENT_TYPES = %w(
 
 CONTENT_TYPE_MAPPING = {
     "medium.com": "medium-m"
+    "youtube.com": "youtube"
 }
