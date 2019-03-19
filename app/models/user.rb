@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   has_many :merms, :foreign_key => "owner_id", dependent: :destroy
   has_many :comments, :foreign_key => "author_id", dependent: :destroy
-  has_many :categories, :foreign_key => "owner_id", dependent: :destroy
+  has_many :categories, -> { custom }, :foreign_key => "owner_id", dependent: :destroy
 
   def init_user_categories
     fixed_categories = ["Recent", "Favorites", "Unread Resources"]
@@ -22,6 +22,15 @@ class User < ApplicationRecord
       )
     end
   end
+  
+  def shared_with_merms
+    Share.where(:shared_with_id => self.id).map(&:merm)
+  end
+
+  def fullname
+    "#{first_name} #{last_name}"
+  end
+
 end
 
 # == Schema Information

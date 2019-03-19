@@ -4,8 +4,9 @@ module Types
       name 'TagInputType'
       description 'Properties for adding a new Tag'
 
-      argument :name, !types.String
-      argument :merm_id , !types.ID
+      argument :id, types.ID
+      argument :name, types.String
+      argument :merm_id , types.ID
     end
   end
 end

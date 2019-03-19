@@ -6,6 +6,7 @@ module Types
 
       argument :name, !types.String
       argument :categoryId, types.ID
+      argument :expiryDate, types.String
       argument :capturedText, types.String
       argument :tags, types[types.String]
       argument :source, types.String

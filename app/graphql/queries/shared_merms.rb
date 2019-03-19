@@ -1,11 +1,11 @@
 module Queries
-  AllMerms = GraphQL::Field.define do
-    name 'allMerms'
+  SharedMerms = GraphQL::Field.define do
+    name 'sharedMerms'
 
     type types[Types::MermType]
 
     resolve Resolvers::Helpers::AuthorizeUser.new(->(_obj, _args, ctx) {
-      Merm.where(:owner_id => ctx[:current_user].id)
+      ctx[:current_user].shared_with_merms
     })
   end
 end

@@ -10,4 +10,7 @@ Mutation = GraphQL::ObjectType.define do
   field :addTag, Mutations::AddTag
   field :deleteTag, Mutations::DeleteTag
   field :deleteMerm, Mutations::DeleteMerm
+  field :shareMerm, Mutations::ShareMerm
+  field :copyMerm, Mutations::CopyMerm
+  field :logMermAccess, Mutations::LogMermAccess
 end

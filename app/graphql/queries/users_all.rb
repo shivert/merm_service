@@ -1,6 +1,6 @@
 module Queries
-  GetUsers = GraphQL::Field.define do
-    name 'getUsers'
+  UsersAll = GraphQL::Field.define do
+    name 'usersAll'
 
     type types[Types::UserType]
 

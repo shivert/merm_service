@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190303023841) do
+ActiveRecord::Schema.define(version: 20190318191114) do
 
   create_table "categories", force: :cascade do |t|
     t.integer "owner_id", null: false
@@ -41,10 +41,22 @@ ActiveRecord::Schema.define(version: 20190303023841) do
     t.string "description"
     t.string "captured_text"
     t.datetime "last_accessed"
-    t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
+    t.boolean "archived", default: false, null: false
+    t.boolean "expired", default: false, null: false
+    t.datetime "expiry_date"
     t.index ["deleted_at"], name: "index_merms_on_deleted_at"
+  end
+
+  create_table "shares", force: :cascade do |t|
+    t.integer "merm_id"
+    t.integer "sharer_id"
+    t.integer "shared_with_id"
+    t.boolean "read", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "tags", force: :cascade do |t|
@@ -52,6 +64,8 @@ ActiveRecord::Schema.define(version: 20190303023841) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "owner_id"
+    t.index ["owner_id"], name: "index_tags_on_owner_id"
   end
 
   create_table "users", force: :cascade do |t|

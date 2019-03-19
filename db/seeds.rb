@@ -2,25 +2,35 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 require 'faker'
 
+Merm.__elasticsearch__.client.indices.delete index: Merm.index_name rescue nil
+Category.__elasticsearch__.client.indices.delete index: Category.index_name rescue nil
+
 Merm.__elasticsearch__.create_index!(force: true)
+Category.__elasticsearch__.create_index!(force: true)
 
 ## Hard Code User Account
 input = [
  {
-     first_name: Faker::Name.first_name,
-     last_name: Faker::Name.last_name,
+     first_name: "Spencer",
+     last_name: "Hivert",
      email: "spencer.hivert@gmail.com",
      password: "password"
  },
  {
-     first_name: Faker::Name.first_name,
-     last_name: Faker::Name.last_name,
+     first_name: "Zach",
+     last_name: "Pustowka",
      email: "zach.pustowka@gmail.com",
      password: "password"
  },
  {
-     first_name: Faker::Name.first_name,
-     last_name: Faker::Name.last_name,
+     first_name: "Colin",
+     last_name: "Vander Glas",
+     email: "colin7vanderglas@gmail.com",
+     password: "password"
+ },
+ {
+     first_name: "Peter",
+     last_name: "Zhang",
      email: "peterzhang7391@gmail.com",
      password: "password"
  }
@@ -44,10 +54,10 @@ end
 
 User.all.each do |user|
 
-  2.times do |idx|
+  3.times do |idx|
     Category.create!(
        owner_id: user.id,
-       name: Faker::Space.star,
+       name: Faker::App.name,
        rank: idx + 3,
        custom: true
     )
@@ -75,7 +85,8 @@ Merm.all.each do |merm|
   3.times do |idx|
     Tag.create!(
         name: Faker::Company.buzzword,
-        merm_id: merm.id
+        merm_id: merm.id,
+        owner_id: merm.user.id
     )
   end
 

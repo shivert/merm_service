@@ -1,11 +1,14 @@
 Query = GraphQL::ObjectType.define do
   name 'Query'
 
-  field :allMerms, Queries::AllMerms
+  field :merms, Queries::Merms
   field :dashboardMerms, Queries::DashboardMerms
   field :merm, Queries::GetMerm
-  field :categories, Queries::GetCategories
-  field :users, Queries::GetUsers
-  field :tags, Queries::GetTags
-  field :searchMerm, Queries::SearchMerm
+  field :mermByUrl, Queries::MermByUrl
+  field :dashboardCategories, Queries::DashboardCategories
+  field :categories, Queries::Categories
+  field :users, Queries::Users
+  field :usersAll, Queries::UsersAll
+  field :tags, Queries::Tags
+  field :sharedMerms, Queries::SharedMerms
 end

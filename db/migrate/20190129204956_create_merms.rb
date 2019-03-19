@@ -12,11 +12,7 @@ class CreateMerms < ActiveRecord::Migration[5.1]
       t.string :description
       t.string :captured_text
       t.datetime :last_accessed
-      t.datetime :deleted_at
-
       t.timestamps
     end
-
-    add_index :merms, :deleted_at
   end
 end

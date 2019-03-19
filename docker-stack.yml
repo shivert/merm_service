@@ -1,11 +1,5 @@
 version: '3'
 
-volumes:
-  store:
-    driver: local
-  bundle:
-    driver: local
-
 services:
   backend:
     image: spencerhivert/merm_service_web:latest
@@ -14,7 +8,6 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - .:/app
       - bundle:/usr/local/bundle
     networks:
       - merm-overlay-network
@@ -36,7 +29,7 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - store:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/data
     networks:
       - merm-overlay-network
     environment:
@@ -86,6 +79,8 @@ services:
 
 volumes:
   esdata:
+    external: true
+  pgdata:
     external: true
   store:
     driver: local

@@ -18,7 +18,7 @@ module Mutations
 
           if @merm.save
             tags.each do |name|
-              Tag.create!(name: name, merm_id: @merm.id)
+              Tag.create!(name: name, merm_id: @merm.id, owner_id: @user.id)
             end
           end
         end

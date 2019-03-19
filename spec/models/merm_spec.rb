@@ -3,10 +3,13 @@
 # Table name: merms
 #
 #  id            :integer          not null, primary key
+#  archived      :boolean          default(FALSE), not null
 #  captured_text :string
 #  content_type  :string
 #  deleted_at    :datetime
 #  description   :string
+#  expired       :boolean          default(FALSE), not null
+#  expiry_date   :datetime
 #  favorite      :boolean          default(FALSE), not null
 #  last_accessed :datetime
 #  name          :string

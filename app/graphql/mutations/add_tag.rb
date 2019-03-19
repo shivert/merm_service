@@ -7,11 +7,13 @@ module Mutations
 
     resolve Resolvers::Helpers::AuthorizeUser.new(->(_obj, args, ctx) {
       input = Hash[args['tagDetails'].to_h.map {|k, v| [k.to_s.underscore.to_sym, v]}]
+      input[:owner_id] =
 
       @merm = Merm.find(input[:merm_id])
       if @merm
         if @merm.user == ctx[:current_user]
           begin
+            input[:owner_id] = ctx[:current_user].id
             @tag = Tag.create!(input)
           rescue ActiveRecord::RecordInvalid => invalid
             GraphQL::ExecutionError.new("Invalid Attributes for #{invalid.record.class.name}: #{invalid.record.errors.full_messages.join(', ')}")

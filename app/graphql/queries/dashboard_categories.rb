@@ -1,6 +1,6 @@
 module Queries
-  GetCategories = GraphQL::Field.define do
-    name 'getCategories'
+  DashboardCategories = GraphQL::Field.define do
+    name 'dashboardCategories'
 
     type types[Types::CategoryType]
 
