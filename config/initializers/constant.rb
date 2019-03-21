@@ -413,10 +413,21 @@ CONTENT_TYPES = %w(
     youtube
     youtube-square
     zhihu
+    envelope-open
   ).freeze
 
-
-
 CONTENT_TYPE_MAPPING = {
-    "medium.com": "medium-m"
+    "medium.com": "medium-m",
+    "youtube.com": "youtube",
+    "www.linkedin.com": "linkedin",
+    "github.com": "github" ,
+    "www.hackerrank.com": "hackerrank",
+    "www.facebook.com": "facebook",
+    "sydecapstone20182019.slack.com": "slack",
+    "slack.com": "slack",
+    "drive.google.com": "google-drive",
+    "open.spotify.com": "spotify",
+    "outlook.office365.com": "microsoft",
+    "mail.google.com": "envelope-open",
+    "www.messenger.com": "facebook-messenger"
 }
