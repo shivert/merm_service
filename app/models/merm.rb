@@ -10,6 +10,7 @@ class Merm < ApplicationRecord
   has_many :tags, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :shares, dependent: :destroy
+  has_many :history, class_name: 'History', dependent: :destroy
   belongs_to :category, foreign_key: "category_id", optional: true
 
   validates :content_type, :inclusion => { :in => CONTENT_TYPES }

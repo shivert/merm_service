@@ -36,6 +36,9 @@ module Types
     field :sharedWith, types[Types::UserType] do
       resolve -> (obj, args, ctx) { obj.shares.map(&:shared_with) }
     end
+    field :history, types[Types::HistoryType] do
+      resolve -> (obj, args, ctx) { obj.history.sort_by(&:visit_time) }
+    end
   end
 end
 

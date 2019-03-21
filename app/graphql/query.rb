@@ -2,7 +2,6 @@ Query = GraphQL::ObjectType.define do
   name 'Query'
 
   field :merms, Queries::Merms
-  field :dashboardMerms, Queries::DashboardMerms
   field :merm, Queries::GetMerm
   field :mermByUrl, Queries::MermByUrl
   field :dashboardCategories, Queries::DashboardCategories
