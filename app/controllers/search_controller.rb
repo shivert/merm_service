@@ -54,9 +54,6 @@ class SearchController < ApplicationController
                     },
                     {
                         term: {read: false}
-                    },
-                    {
-                        term: {expired: false}
                     }
                 ]
             }

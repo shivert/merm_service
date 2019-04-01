@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9c26994-8dde-4e29-8e87-82e11fe4cf10" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/graphql/types/history_type.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/graphql/types/input/history_input_type.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-reset-db.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/graphql/mutations/create_merm.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/mutations/create_merm.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/graphql/queries/dashboard_merms.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/graphql/query.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/query.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/graphql/types/dashboard_type.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/graphql/types/input/merm_input_type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/types/input/merm_input_type.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/graphql/types/merm_type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/graphql/types/merm_type.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/merm.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/merm.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/search_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/search_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/constant.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/constant.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-stack.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-stack.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/merm_dev" beforeDir="false" afterPath="$PROJECT_DIR$/merm_dev" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -48,8 +42,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/models/merm.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="104" selection-start-line="104" selection-end-line="104" />
+                <state relative-caret-position="1605">
+                  <caret line="107" selection-start-line="107" selection-end-line="107" />
                 </state>
               </provider>
             </entry>
@@ -64,51 +58,51 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/bin/start.sh">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/docker-stack.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="510">
+                  <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/initializers/constant.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="6165">
+                  <caret line="411" column="9" selection-start-line="411" selection-start-column="9" selection-end-line="411" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/environment.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="11" selection-start-line="11" selection-end-line="11" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/models/tag.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="26" selection-start-line="26" selection-end-line="28" />
+                <state relative-caret-position="420">
+                  <caret line="28" selection-start-line="28" selection-end-line="28" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/graphql/queries/categories.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="12" selection-start-line="12" selection-end-line="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/graphql/mutations/edit_merm.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/db/migrate/20190318191114_add_archived_support_to_merms.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" selection-start-line="6" selection-end-line="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/graphql/mutations/create_merm.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Gemfile">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="420">
@@ -117,11 +111,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/graphql/types/merm_type.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+                <state relative-caret-position="570">
+                  <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
@@ -129,8 +123,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/models/category.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="668">
-                  <caret line="73" selection-start-line="73" selection-end-line="74" selection-end-column="15" />
+                <state relative-caret-position="960">
+                  <caret line="64" selection-start-line="64" selection-end-line="64" />
                 </state>
               </provider>
             </entry>
@@ -139,79 +133,65 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/models/merm.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="428">
-                  <caret line="105" column="15" selection-start-line="105" selection-start-column="15" selection-end-line="105" selection-end-column="15" />
+                <state relative-caret-position="450">
+                  <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/graphql/types/input/merm_input_type.rb">
+            <entry file="file://$PROJECT_DIR$/app/models/share.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+                <state relative-caret-position="525">
+                  <caret line="35" selection-start-line="35" selection-end-line="35" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/graphql/types/input/history_input_type.rb">
+            <entry file="file://$USER_HOME$/.rbenv/versions/2.5.0/lib/ruby/2.5.0/rdoc/generator/template/darkfish/_sidebar_search.rhtml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" selection-start-line="13" selection-end-line="13" />
+                <state>
+                  <caret selection-end-line="14" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/models/history.rb">
+            <entry file="file://$PROJECT_DIR$/app/controllers/search_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" selection-start-line="17" selection-end-line="17" />
+                <state relative-caret-position="684">
+                  <caret line="166" column="20" lean-forward="true" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/docker-stack.yml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="495">
+                  <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/graphql/query.rb">
+            <entry file="file://$PROJECT_DIR$/docker-reset-db.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" selection-start-line="13" selection-end-line="13" />
+                <state relative-caret-position="135">
+                  <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/graphql/types/input/tag_input_type.rb">
+            <entry file="file://$PROJECT_DIR$/app/models/tag.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" column="16" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/graphql/types/input/user_input_type.rb">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/graphql/types/input/edit_merm_input_type.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" selection-start-line="19" selection-end-line="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/graphql/types/input/share_input_type.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+                <state relative-caret-position="420">
+                  <caret line="28" selection-start-line="28" selection-end-line="28" />
                 </state>
               </provider>
             </entry>
@@ -219,8 +199,26 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/models/category.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="346">
-                  <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+                <state relative-caret-position="405">
+                  <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Dockerfile">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="315">
+                  <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/entrypoint.sh">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
                 </state>
               </provider>
             </entry>
@@ -231,14 +229,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>include Elasticsearch::Model::Callbacks</find>
-      <find>elasticsearch.</find>
-      <find>localhost</find>
-      <find>depend</find>
-      <find>sqlite3</find>
-      <find>build</find>
-      <find>app_env</find>
-      <find>global</find>
       <find>database.yml</find>
       <find>controllers/devise/sessions_controller</find>
       <find>secret</find>
@@ -256,11 +246,19 @@
       <find>def search</find>
       <find>tags</find>
       <find>advanced</find>
-      <find>search</find>
       <find>multi_</find>
       <find>TagInputType</find>
       <find>import</find>
       <find>c</find>
+      <find>tag</find>
+      <find>share</find>
+      <find>.import</find>
+      <find>t</find>
+      <find>.index_name</find>
+      <find>s</find>
+      <find>yout</find>
+      <find>shared</find>
+      <find>search</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -269,11 +267,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/graphql/mutations/add_tag.rb" />
-        <option value="$PROJECT_DIR$/app/graphql/types/input/share_merm_type.rb" />
-        <option value="$PROJECT_DIR$/app/graphql/types/input/share_merm_input_type.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20190312014553_create_shares.rb" />
-        <option value="$PROJECT_DIR$/app/graphql/queries/get_users.rb" />
         <option value="$PROJECT_DIR$/app/graphql/queries/get_shared_merms.rb" />
         <option value="$PROJECT_DIR$/app/graphql/queries/get_tags.rb" />
         <option value="$PROJECT_DIR$/app/graphql/queries/users.rb" />
@@ -293,7 +286,6 @@
         <option value="$PROJECT_DIR$/app/graphql/mutations/update_categories.rb" />
         <option value="$PROJECT_DIR$/app/graphql/mutations/edit_merm.rb" />
         <option value="$PROJECT_DIR$/app/graphql/types/input/category_input_type.rb" />
-        <option value="$PROJECT_DIR$/docker-stack.yml" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/graphql/queries/all_users.rb" />
         <option value="$PROJECT_DIR$/app/graphql/queries/users_all.rb" />
@@ -305,7 +297,6 @@
         <option value="$PROJECT_DIR$/app/graphql/queries/get_merm.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190318191114_add_archived_support_to_merms.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/search_controller.rb" />
         <option value="$PROJECT_DIR$/app/graphql/types/input/edit_merm_input_type.rb" />
         <option value="$PROJECT_DIR$/app/graphql/queries/merm_by_email.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190320174331_create_histories.rb" />
@@ -314,16 +305,23 @@
         <option value="$PROJECT_DIR$/app/graphql/types/input/history_input_type.rb" />
         <option value="$PROJECT_DIR$/app/graphql/types/history_type.rb" />
         <option value="$PROJECT_DIR$/app/graphql/query.rb" />
-        <option value="$PROJECT_DIR$/app/models/merm.rb" />
-        <option value="$PROJECT_DIR$/app/models/tag.rb" />
-        <option value="$PROJECT_DIR$/app/models/category.rb" />
-        <option value="$PROJECT_DIR$/app/models/share.rb" />
         <option value="$PROJECT_DIR$/app/graphql/mutations/create_merm.rb" />
         <option value="$PROJECT_DIR$/app/graphql/types/merm_type.rb" />
+        <option value="$PROJECT_DIR$/app/models/tag.rb" />
+        <option value="$PROJECT_DIR$/app/models/merm.rb" />
+        <option value="$PROJECT_DIR$/app/models/share.rb" />
+        <option value="$PROJECT_DIR$/app/models/category.rb" />
+        <option value="$PROJECT_DIR$/entrypoint.sh" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/bin/start.sh" />
+        <option value="$PROJECT_DIR$/docker-reset-db.yml" />
+        <option value="$PROJECT_DIR$/docker-stack.yml" />
+        <option value="$PROJECT_DIR$/config/initializers/constant.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/search_controller.rb" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="58" />
     <option name="y" value="23" />
     <option name="width" value="1622" />
@@ -337,8 +335,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -355,53 +353,7 @@
               <item name="merm_service" type="b2602c69:ProjectViewProjectNode" />
               <item name="merm_service" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="graphql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="merm_service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="merm_service" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="graphql" type="462c0819:PsiDirectoryNode" />
-              <item name="mutations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="merm_service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="merm_service" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="graphql" type="462c0819:PsiDirectoryNode" />
-              <item name="queries" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="merm_service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="merm_service" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="graphql" type="462c0819:PsiDirectoryNode" />
-              <item name="types" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="merm_service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="merm_service" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="graphql" type="462c0819:PsiDirectoryNode" />
-              <item name="types" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="merm_service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="merm_service" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="merm_service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="merm_service" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="merm_service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="merm_service" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="migrate" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="merm_service" type="b2602c69:ProjectViewProjectNode" />
@@ -582,21 +534,22 @@
       <workItem from="1552434795046" duration="6821000" />
       <workItem from="1552489493911" duration="8378000" />
       <workItem from="1552505827175" duration="32000" />
-      <workItem from="1552506227142" duration="25511000" />
+      <workItem from="1552506227142" duration="31584000" />
+      <workItem from="1553451822794" duration="627000" />
+      <workItem from="1553630079033" duration="677000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172644000" />
+    <option name="totallyTimeSpent" value="180021000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="58" y="23" width="1622" height="1027" extended-state="6" />
+    <frame x="58" y="23" width="1622" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21329114" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18354431" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3271028" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -609,6 +562,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50246304" side_tool="true" weight="0.3292683" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49753696" weight="0.32840237" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -622,69 +576,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.rb" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/graphql/mutations/update_categories.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/graphql/types/input/categories_input_type.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/graphql/types/input/category_input_type.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/constant.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="172" column="22" selection-start-line="172" selection-start-column="22" selection-end-line="172" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker-stack.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/graphql/queries/users.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/graphql/queries/users_all.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/graphql/mutations/share_merm.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -699,13 +590,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/graphql/mutations/read_shared_merm.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/graphql/mutations/read_shared_merm.rb" />
     <entry file="file://$PROJECT_DIR$/app/graphql/mutation.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -738,13 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/search_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="167" column="37" selection-start-line="167" selection-start-column="37" selection-end-line="167" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -845,9 +723,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/graphql/types/dashboard_type.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/graphql/types/dashboard_type.rb" />
     <entry file="file://$PROJECT_DIR$/app/graphql/types/query_type.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -893,38 +769,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/tag.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" selection-start-line="26" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/graphql/queries/categories.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/category.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="73" selection-start-line="73" selection-end-line="74" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/share.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/merm.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
         </state>
       </provider>
     </entry>
@@ -949,6 +797,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/start.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/constant.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6165">
+          <caret line="411" column="9" selection-start-line="411" selection-start-column="9" selection-end-line="411" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/graphql/types/merm_type.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -956,10 +839,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/graphql/types/merm_type.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/merm.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        <state relative-caret-position="450">
+          <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/share.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rbenv/versions/2.5.0/lib/ruby/2.5.0/rdoc/generator/template/darkfish/_sidebar_search.rhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-reset-db.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/tag.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/category.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entrypoint.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/search_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="166" column="20" lean-forward="true" selection-start-line="166" selection-start-column="20" selection-end-line="166" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-stack.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
         </state>
       </provider>
     </entry>

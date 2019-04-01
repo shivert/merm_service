@@ -427,6 +427,7 @@ CONTENT_TYPE_MAPPING = {
     "slack.com": "slack",
     "drive.google.com": "google-drive",
     "open.spotify.com": "spotify",
+    "outlook.office.com": "microsoft",
     "outlook.office365.com": "microsoft",
     "mail.google.com": "envelope-open",
     "www.messenger.com": "facebook-messenger"

@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  backend:
+    image: spencerhivert/merm_service_web:latest
+    depends_on:
+      - db
+    ports:
+      - 3000:3000
+    volumes:
+      - bundle:/usr/local/bundle
+    networks:
+      - merm-overlay-network
+    # Keep the stdin open, so we can attach to our app container's process and do things such as
+    # byebug, etc:
+    stdin_open: true
+    # Enable sending signals (CTRL+C, CTRL+P + CTRL+Q) into the container:
+    tty: true
+    command:
+      - /bin/bash
+      - -c
+      - |
+        DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:reset
+    environment: &app_env
+      PORT: 3000
+      DB_HOST: merm_db
+      DB_PORT: 5432
+      DB_NAME: merm_dev
+      DB_USER: postgres
+      DB_PSWD: postgres
+
+
+volumes:
+  esdata:
+    external: true
+  pgdata:
+    external: true
+  store:
+    driver: local
+  bundle:
+    driver: local
+
+networks:
+  merm-overlay-network:
+    external:
+      name: merm-overlay-network
